@@ -5,26 +5,38 @@ let squareLeft = 0;
 let squareDown = 0;
 
 function animate(e) {
-    console.log(e.keyCode);
 
     if (e.keyCode === 39) {
-        squareLeft += 100;
+        squareLeft += 50;
         square.style.left = squareLeft + 'px';
+        if (squareLeft >= 450) {
+            squareLeft = -50;
+        }
     }
 
     if (e.keyCode === 37) {
-        squareLeft -= 100;
+        squareLeft -= 50;
         square.style.left = squareLeft + 'px';
+        if (squareLeft <= 0) {
+            squareLeft = 450;
+        }
     }
 
     if (e.keyCode === 40) {
-        squareDown += 100;
+        squareDown += 50;
         square.style.top = squareDown + 'px';
+        if (squareDown >= 450) {
+            squareDown = -50;
+        }
+        
     }
 
     if (e.keyCode === 38) {
-        squareDown -= 100;
+        squareDown -= 50;
         square.style.top = squareDown + 'px';
+        if (squareDown <= 0) {
+            squareDown = 500;
+        }
     }
 }
 
