@@ -1,6 +1,13 @@
-.square {
-    background: red;
+#square {
+    position: absolute;
+    background-color: red;
     width: 100px;
     height: 100px;
-    margin: 50px auto;
+}
+
+.container {
+    height: 400px;
+    width: 600px;
+    outline: 1px solid black;
+    position: relative;
 }
