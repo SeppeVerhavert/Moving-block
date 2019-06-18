@@ -89,32 +89,32 @@ function keepCount() {
         }
         if (counter > 5) 
         {
-            document.getElementById("square").style.backgroundColor = '#05AFF2';
+            document.getElementById("square").style.backgroundColor = '#F2059F';
         }
         if (counter > 10) 
         {
-            document.getElementById("square").style.backgroundColor = 'green';
+            document.getElementById("square").style.backgroundColor = '#04D99D';
         }
         if (counter > 15) 
         {
-            document.getElementById("counter").style.color = 'blue';
+            document.getElementById("counter").style.color = '#F2059F';
         }
         if (counter > 20) 
         {
-            document.getElementById("square").style.backgroundColor = 'white';
+            document.getElementById("square").style.backgroundColor = '#002125';
         }
         if (counter > 25) 
         {
-            document.getElementById("square").style.backgroundColor = 'black';
-            document.getElementById("counter").style.color = 'black';
-            document.getElementById("counter").style.backgroundColor = 'black';
+            document.getElementById("square").style.backgroundColor = '#040A12';
+            document.getElementById("counter").style.color = '#040A12';
+            document.getElementById("counter").style.backgroundColor = '#040A12';
         }
         if (counter > 26) 
         {
             document.getElementById("victory").style.display = 'inline';
-            document.getElementById("square").style.backgroundColor = 'white';
-            document.getElementById("counter").style.color = 'white';
-            document.getElementById("counter").style.backgroundColor = 'white';
+            document.getElementById("square").style.backgroundColor = '#002125';
+            document.getElementById("counter").style.color = '#002125';
+            document.getElementById("counter").style.backgroundColor = '#002125';
         }
     }
 }
