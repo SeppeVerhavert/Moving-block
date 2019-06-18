@@ -2,6 +2,7 @@ const square = document.getElementById('square');
 const container = document.getElementById('container');
 const food = document.createElement('div');
 const victory = document.getElementById('victory');
+const intro = document.getElementById('intro');
 
 document.onkeydown = animate;
 document.getElementById("body").addEventListener("load", createFood());
@@ -47,6 +48,10 @@ function animate(e) {
     detectCollision();
 }
 
+function resetLeft () {
+
+}
+
 function createFood() {
 
     food.id = 'food';
@@ -78,9 +83,13 @@ function keepCount() {
     scaleDificulty();
 
     function scaleDificulty() {
+        if (counter >= 1) 
+        {
+            document.getElementById("intro").style.display = 'none';
+        }
         if (counter > 5) 
         {
-            document.getElementById("square").style.backgroundColor = 'blue';
+            document.getElementById("square").style.backgroundColor = '#05AFF2';
         }
         if (counter > 10) 
         {

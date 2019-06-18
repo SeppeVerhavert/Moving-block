@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 html {
-    background-image: url(../images/video-game-press-start-retro-arcade-screen-flyforward-blue-look-style-2_45tjnxbtx__F0000.png);
-    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
     align-content: center;
+    background-size: cover;
 }
 
 body {
     width: 50%;
-    margin-left: 25%;
+    margin-left: 25.5%;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
 
 }
 
@@ -29,7 +31,7 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
-    color:green;
+    color:#04D99D;
     font-size: 400px;
     font-family: 'Press Start 2P', cursive;
 }
@@ -38,7 +40,7 @@ body {
     position: absolute;
     top:0;
     left:0;
-    background-color: red;
+    background-color:#05AFF2;
     width: 50px;
     height: 50px;
     z-index: 2;
@@ -46,9 +48,12 @@ body {
 
 #food {
     position: absolute;
-    background-color: blue;
+    top:0;
+    left:0;
+    background-color: #F2059F;
     width: 51px;
     height: 51px;
+    z-index: 2;
 }
 
 #victory {
@@ -59,9 +64,23 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
-    color: blue;
+    color:#04D99D;
     font-size: 120px;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     display: none;
+}
+
+#intro {
+    margin-top: 5%;
+    height: 500px;
+    width: 750px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #04D99D;
+    font-size: 60px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
 }
