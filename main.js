@@ -1,20 +1,20 @@
 const square = document.getElementById('square');
 const container = document.getElementById('container');
-const food = document.getElementById('food');
-const foodBtn = document.getElementById('foodBtn');
+const food = document.createElement('div');
 
 document.getElementById("body").addEventListener("load", createFood());
 
 let squareLeft = 0;
 let squareTop = 0;
 
+
+
 function createFood() {
 
-    let food = document.createElement('div');
     food.id = 'food';
     
-    randomX = Math.floor(Math.random() * (9 - 0 + 1) + 0)*50;
-    randomY = Math.floor(Math.random() * (9 - 0 + 1) + 0)*50;
+    randomX = Math.floor(Math.random() * (8 - 0 + 1) + 0)*50;
+    randomY = Math.floor(Math.random() * (8 - 0 + 1) + 0)*50;
 
     food.style.left = randomX + 'px';
     food.style.top = randomY + 'px';
@@ -22,10 +22,16 @@ function createFood() {
     container.appendChild(food);
 }
 
+function deleteFood() {
+    food.parentNode.removeChild(food);
+}
+
 function detectCollision() {
     if (squareLeft === randomX && squareTop === randomY){
-        alert("Collision"); 
+        deleteFood();
+        createFood();
     }
+    
 }
 
 function animate(e) {
