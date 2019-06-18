@@ -78,24 +78,30 @@ function keepCount() {
     scaleDificulty();
 
     function scaleDificulty() {
-        if (counter > 5) {
+        if (counter > 5) 
+        {
             document.getElementById("square").style.backgroundColor = 'blue';
         }
-        if (counter > 10) {
+        if (counter > 10) 
+        {
             document.getElementById("square").style.backgroundColor = 'green';
         }
-        if (counter > 15) {
+        if (counter > 15) 
+        {
             document.getElementById("counter").style.color = 'blue';
         }
-        if (counter > 20) {
+        if (counter > 20) 
+        {
             document.getElementById("square").style.backgroundColor = 'white';
         }
-        if (counter > 25) {
+        if (counter > 25) 
+        {
             document.getElementById("square").style.backgroundColor = 'black';
             document.getElementById("counter").style.color = 'black';
             document.getElementById("counter").style.backgroundColor = 'black';
         }
-        if (counter > 26) {
+        if (counter > 26) 
+        {
             document.getElementById("victory").style.display = 'inline';
             document.getElementById("square").style.backgroundColor = 'white';
             document.getElementById("counter").style.color = 'white';
