@@ -16,18 +16,13 @@ function createFood() {
     let food = document.createElement('div');
     food.id = 'food';
 
-    let foodLeft = 0;
-    let foodTop = 0;
+    let x = Math.floor(Math.random() * containerWidth);
+    let y = Math.floor(Math.random() * containerHeigth);
+    let randomX = Math.floor(Math.random() * x);
+    let randomY = Math.floor(Math.random() * y);
 
-    // let x = Math.floor(Math.random() * containerWidth);
-    // let y = Math.floor(Math.random() * containerHeigth);
-    // let randomX = Math.floor(Math.random() * x);
-    // let randomY = Math.floor(Math.random() * y);
-    // console.log(randomX)
-    // console.log(randomY)
-
-    food.style.left = foodLeft;
-    food.style.top = foodTop;
+    food.style.left = randomX + 'px';
+    food.style.top = randomY + 'px';
 
     container.appendChild(food);
 }
