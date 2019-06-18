@@ -4,8 +4,17 @@ const container = document.getElementById('container');
 let squareLeft = 0;
 let squareTop = 0;
 
+let containerWidth = 500;
+let containerHeigth = 500;
+
 function createFood(){
-    
+    var x = Math.floor(Math.random()*containerWidth);
+    var y = Math.floor(Math.random()*containerHeigth);
+	let randomX = Math.floor(Math.random()*x);
+	let randomY = Math.floor(Math.random()*y);
+    // return [randomX,randomY];
+    console.log(randomX)
+    console.log(randomY)
 }
 
 function animate(e) {
