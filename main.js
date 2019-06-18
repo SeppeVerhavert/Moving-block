@@ -7,14 +7,12 @@ document.getElementById("body").addEventListener("load", createFood());
 let squareLeft = 0;
 let squareTop = 0;
 
-
-
 function createFood() {
 
     food.id = 'food';
     
-    randomX = Math.floor(Math.random() * (8 - 0 + 1) + 0)*50;
-    randomY = Math.floor(Math.random() * (8 - 0 + 1) + 0)*50;
+    randomX = Math.floor(Math.random() * (8) + 1)*50;
+    randomY = Math.floor(Math.random() * (8) + 1)*50;
 
     food.style.left = randomX + 'px';
     food.style.top = randomY + 'px';
