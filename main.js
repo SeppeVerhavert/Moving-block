@@ -1,6 +1,8 @@
 const square = document.getElementById('square');
+const container = document.getElementById('container');
 const food = document.getElementById('food');
 const foodBtn = document.getElementById('foodBtn');
+
 foodBtn.addEventListener("click", createFood);
 
 let squareLeft = 0;
@@ -11,25 +13,23 @@ let containerHeigth = 500;
 
 function createFood() {
 
-    var food = document.createElement('div');
+    let food = document.createElement('div');
     food.id = 'food';
-    document.body.appendChild(food);
 
-    createPosition();
+    let foodLeft = 0;
+    let foodTop = 0;
 
-    function createPosition() {
+    // let x = Math.floor(Math.random() * containerWidth);
+    // let y = Math.floor(Math.random() * containerHeigth);
+    // let randomX = Math.floor(Math.random() * x);
+    // let randomY = Math.floor(Math.random() * y);
+    // console.log(randomX)
+    // console.log(randomY)
 
-        let squareLeft = 0;
-        let squareTop = 0;
+    food.style.left = foodLeft;
+    food.style.top = foodTop;
 
-        var x = Math.floor(Math.random() * containerWidth);
-        var y = Math.floor(Math.random() * containerHeigth);
-        let randomX = Math.floor(Math.random() * x);
-        let randomY = Math.floor(Math.random() * y);
-        // return [randomX,randomY];
-        console.log(randomX)
-        console.log(randomY)
-    }
+    container.appendChild(food);
 }
 
 function animate(e) {
