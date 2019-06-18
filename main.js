@@ -15,11 +15,9 @@ function createFood() {
 
     let food = document.createElement('div');
     food.id = 'food';
-
-    let x = Math.floor(Math.random() * containerWidth);
-    let y = Math.floor(Math.random() * containerHeigth);
-    let randomX = Math.floor(Math.random() * x);
-    let randomY = Math.floor(Math.random() * y);
+    
+    randomX = Math.floor(Math.random() * (9 - 0 + 1) + 0)*50;
+    randomY = Math.floor(Math.random() * (9 - 0 + 1) + 0)*50;
 
     food.style.left = randomX + 'px';
     food.style.top = randomY + 'px';
