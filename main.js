@@ -8,9 +8,6 @@ document.getElementById("body").addEventListener("load", createFood());
 let squareLeft = 0;
 let squareTop = 0;
 
-let containerWidth = 500;
-let containerHeigth = 500;
-
 function createFood() {
 
     let food = document.createElement('div');
