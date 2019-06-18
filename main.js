@@ -1,5 +1,7 @@
 const square = document.getElementById('square');
-const container = document.getElementById('container');
+const food = document.getElementById('food');
+const foodBtn = document.getElementById('foodBtn');
+foodBtn.addEventListener("click", createFood);
 
 let squareLeft = 0;
 let squareTop = 0;
@@ -7,14 +9,27 @@ let squareTop = 0;
 let containerWidth = 500;
 let containerHeigth = 500;
 
-function createFood(){
-    var x = Math.floor(Math.random()*containerWidth);
-    var y = Math.floor(Math.random()*containerHeigth);
-	let randomX = Math.floor(Math.random()*x);
-	let randomY = Math.floor(Math.random()*y);
-    // return [randomX,randomY];
-    console.log(randomX)
-    console.log(randomY)
+function createFood() {
+
+    var food = document.createElement('div');
+    food.id = 'food';
+    document.body.appendChild(food);
+
+    createPosition();
+
+    function createPosition() {
+
+        let squareLeft = 0;
+        let squareTop = 0;
+
+        var x = Math.floor(Math.random() * containerWidth);
+        var y = Math.floor(Math.random() * containerHeigth);
+        let randomX = Math.floor(Math.random() * x);
+        let randomY = Math.floor(Math.random() * y);
+        // return [randomX,randomY];
+        console.log(randomX)
+        console.log(randomY)
+    }
 }
 
 function animate(e) {
@@ -41,7 +56,6 @@ function animate(e) {
         if (squareTop > 400) {
             squareTop = 400;
         }
-        
     }
 
     if (e.keyCode === 38) {
