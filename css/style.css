@@ -21,9 +21,3 @@
     outline: 50px solid black;
     position: relative;
 }
-
-#foodBtn {
-    position: absolute;
-    left: 150px;
-    top: 300px;
-}

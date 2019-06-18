@@ -3,7 +3,7 @@ const container = document.getElementById('container');
 const food = document.getElementById('food');
 const foodBtn = document.getElementById('foodBtn');
 
-foodBtn.addEventListener("click", createFood);
+document.getElementById("body").addEventListener("load", createFood());
 
 let squareLeft = 0;
 let squareTop = 0;
