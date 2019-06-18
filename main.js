@@ -22,6 +22,12 @@ function createFood() {
     container.appendChild(food);
 }
 
+function detectCollision() {
+    if (squareLeft === randomX && squareTop === randomY){
+        alert("Collision"); 
+    }
+}
+
 function animate(e) {
 
     if (e.keyCode === 39) {
@@ -55,6 +61,8 @@ function animate(e) {
             squareTop = 50;
         }
     }
+
+    detectCollision();
 }
 
 document.onkeydown = animate;
