@@ -4,10 +4,11 @@ const container = document.getElementById('container');
 let squareLeft = 0;
 let squareTop = 0;
 
-function animate(e) {
+function createFood(){
+    
+}
 
-    console.log(squareLeft);
-    console.log(squareTop);
+function animate(e) {
 
     if (e.keyCode === 39) {
         squareLeft += 50;
