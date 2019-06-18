@@ -51,7 +51,7 @@ function createFood() {
     food.id = 'food';
     
     randomX = Math.floor(Math.random() * (8) + 1)*50;
-    randomY = Math.floor(Math.random() * (8) + 1)*50;
+    randomY = Math.floor(Math.random() * (6-3) + 3)*50;
 
     food.style.left = randomX + 'px';
     food.style.top = randomY + 'px';
