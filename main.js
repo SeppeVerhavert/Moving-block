@@ -68,7 +68,10 @@ function countDown() {
         document.getElementById("counter").style.display = 'none';
         document.getElementById("progressbar").style.display = 'none';
         document.getElementById('counter').innerHTML = 0;
-    } else if (progressWidth >= 100 && counter === 27) {
+    } else if (progressWidth >= 100 && counter === 0) {
+        clearInterval(progressTime);
+        progressWidth = 0;
+    } else if (progressWidth >= 100 && counter >= 27) {
         clearInterval(progressTime);
         progressWidth = 0;
     }
@@ -107,6 +110,7 @@ function keepCount() {
 
     function scaleDificulty() {
         if (counter >= 1) {
+            resetTime();
             document.getElementById("intro").style.display = 'none';
             document.getElementById("progressbar").style.display = 'block';
             document.getElementById("counter").style.display = 'block';
@@ -153,6 +157,7 @@ function resetGame() {
 
     document.getElementById("progressbar").style.display = 'none';
     document.onkeydown = animate;
-    resetTime();
     counter = 0;
+    clearInterval(progressTime);
+    progressWidth = 0;
 }
