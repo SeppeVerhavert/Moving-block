@@ -11,6 +11,9 @@ let squareLeft = 0;
 let squareTop = 0;
 let counter = 0;
 
+let elem = document.getElementById("progressbar");
+let width = 0;
+
 function animate(e) {
 
     if (e.keyCode === 39) {
@@ -48,9 +51,9 @@ function animate(e) {
     detectCollision();
 }
 
-function resetLeft() {
+// function resetLeft() {
 
-}
+// }
 
 function createFood() {
 
@@ -71,18 +74,17 @@ function deleteFood() {
 
 function detectCollision() {
     if (squareLeft === randomX && squareTop === randomY) {
+        keepTime();
         deleteFood();
         keepCount();
         createFood();
-        keepTime();
     }
 }
 
 function keepTime() {
-    var elem = document.getElementById("progressbar");
-    var width = 0;
-    var id = setInterval(frame, 50);
-    function frame() {
+    
+    var id = setInterval(countDown, 50);
+    function countDown() {
         if (width >= 100) {
             clearInterval(id);
         } else {
