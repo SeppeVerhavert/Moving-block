@@ -12,7 +12,7 @@ let squareTop = 0;
 let counter = 0;
 
 let elem = document.getElementById("progressbar");
-let width = 0;
+let progressWidth = 0;
 let time = setInterval(countDown, 50);
 
 function animate(e) {
@@ -52,9 +52,34 @@ function animate(e) {
     detectCollision();
 }
 
-// function resetLeft() {
+function detectCollision() {
+    if (squareLeft === randomX && squareTop === randomY) {
+        countDown();
+        deleteFood();
+        keepCount();
+        createFood();
+        resetTime();
+    }
+}
 
-// }
+function countDown() {
+    if (progressWidth >= 100) {
+        document.getElementById("loss").style.display = 'block';
+        document.getElementById("square").style.display = 'none';
+        document.getElementById("food").style.display = 'none';
+        document.getElementById("counter").style.display = 'none';
+        document.getElementById("progressbar").style.display = 'none';
+    } else {
+        progressWidth++;
+        elem.style.width = progressWidth + '%';
+    }
+}
+
+function resetTime() {
+    clearInterval(time);
+    progressWidth = 0;
+    time = setInterval(countDown, 50);
+}
 
 function createFood() {
 
@@ -71,35 +96,6 @@ function createFood() {
 
 function deleteFood() {
     food.parentNode.removeChild(food);
-}
-
-function detectCollision() {
-    if (squareLeft === randomX && squareTop === randomY) {
-        countDown();
-        deleteFood();
-        keepCount();
-        createFood();
-        resetTime();
-    }
-}
-
-function countDown() {
-    if (width >= 100) {
-        clearInterval(time);
-        document.getElementById("loss").style.display = 'block';
-        document.getElementById("square").style.display = 'none';
-        document.getElementById("food").style.display = 'none';
-        document.getElementById("counter").style.display = 'none';
-    } else {
-        width++;
-        elem.style.width = width + '%';
-    }
-}
-
-function resetTime() {
-    clearInterval(time);
-    width = 0;
-    time = setInterval(countDown, 50);
 }
 
 function keepCount() {

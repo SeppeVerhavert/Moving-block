@@ -55,6 +55,7 @@ body {
     width: 51px;
     height: 51px;
     z-index: 2;
+    filter: drop-shadow(0 0 2px #04d99d0c);
 }
 
 #victory {
