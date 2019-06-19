@@ -107,6 +107,11 @@ function keepCount() {
     ++counter;
     document.getElementById('counter').innerHTML = counter;
     scaleDificulty();
+    countHighscore();
+
+    function countHighscore() {
+        document.getElementById("currentHighscore").innerHTML = counter;
+    }
 
     function scaleDificulty() {
         if (counter >= 1) {
