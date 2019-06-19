@@ -11,12 +11,11 @@ let squareLeft = 0;
 let squareTop = 0;
 let counter = 0;
 
-let elem = document.getElementById("progressbar");
+let progressBar = document.getElementById("progressbar");
 let progressWidth = 0;
-let time = setInterval(countDown, 50);
+let progressTime = 0;
 
 function animate(e) {
-
     if (e.keyCode === 39) {
         squareLeft += 50;
         square.style.left = squareLeft + 'px';
@@ -71,18 +70,17 @@ function countDown() {
         document.getElementById("progressbar").style.display = 'none';
     } else {
         progressWidth++;
-        elem.style.width = progressWidth + '%';
+        progressBar.style.width = progressWidth + '%';
     }
 }
 
 function resetTime() {
-    clearInterval(time);
+    clearInterval(progressTime);
     progressWidth = 0;
-    time = setInterval(countDown, 50);
+    progressTime = setInterval(countDown, 50);
 }
 
 function createFood() {
-
     food.id = 'food';
 
     randomX = Math.floor(Math.random() * (13) + 1) * 50;
@@ -105,6 +103,7 @@ function keepCount() {
 
     function scaleDificulty() {
         if (counter >= 1) {
+            progressTime = setInterval(countDown, 50);
             document.getElementById("intro").style.display = 'none';
             document.getElementById("progressbar").style.display = 'block';
         }
