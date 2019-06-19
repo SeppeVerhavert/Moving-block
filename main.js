@@ -109,6 +109,7 @@ function keepCount() {
         if (counter >= 1) {
             document.getElementById("intro").style.display = 'none';
             document.getElementById("progressbar").style.display = 'block';
+            document.getElementById("counter").style.display = 'block';
         }
         if (counter > 5) {
             document.getElementById("square").style.backgroundColor = '#F2059F';
@@ -139,11 +140,19 @@ function keepCount() {
 
 function resetGame() {
     document.getElementById("body").addEventListener("load", createFood());
+    document.getElementById("intro").style.display = 'block';
     document.getElementById("loss").style.display = 'none';
+
     document.getElementById("square").style.display = 'block';
+    document.getElementById("square").style.backgroundColor = '#05aff2';
+
     document.getElementById("food").style.display = 'block';
+
     document.getElementById("counter").style.display = 'none';
+    document.getElementById("counter").style.color = '#04d99d';
+
     document.getElementById("progressbar").style.display = 'none';
     document.onkeydown = animate;
     resetTime();
+    counter = 0;
 }
