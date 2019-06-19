@@ -4,8 +4,8 @@ const food = document.createElement('div');
 const victory = document.getElementById('victory');
 const intro = document.getElementById('intro');
 
+document.getElementById("body").addEventListener("load", createFood());
 document.onkeydown = animate;
-document.getElementById("body").addEventListener("load", createFood()); playagainBtn;
 
 let squareLeft = 0;
 let squareTop = 0;
@@ -62,14 +62,18 @@ function detectCollision() {
 }
 
 function countDown() {
-    if (progressWidth >= 100) {
+    if (progressWidth >= 100 && counter < 27) {
         document.getElementById("loss").style.display = 'block';
         document.getElementById("square").style.display = 'none';
         document.getElementById("food").style.display = 'none';
         document.getElementById("counter").style.display = 'none';
         document.getElementById("progressbar").style.display = 'none';
         document.getElementById('counter').innerHTML = 0;
-    } else {
+    } else if (progressWidth >= 100 && counter === 27) {
+        clearInterval(progressTime);
+        progressWidth = 0;
+    }
+    else {
         progressWidth++;
         progressBar.style.width = progressWidth + '%';
     }
@@ -78,7 +82,7 @@ function countDown() {
 function resetTime() {
     clearInterval(progressTime);
     progressWidth = 0;
-    progressTime = setInterval(countDown, 50);
+    progressTime = setInterval(countDown, 80);
 }
 
 function createFood() {
