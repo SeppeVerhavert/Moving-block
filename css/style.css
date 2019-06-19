@@ -82,10 +82,18 @@ body {
     left: 0;
     z-index: 1;
     color: #04d99d;
-    font-size: 120px;
+    font-size: 100px;
     font-family: "Press Start 2P", cursive;
     text-align: center;
     display: none;
+}
+
+#loss button {
+    margin-top: -80px;
+    font-size: 20px;
+    color: white;
+    background-color: #f2059f;
+
 }
 
 #intro {

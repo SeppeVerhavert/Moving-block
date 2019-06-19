@@ -5,7 +5,7 @@ const victory = document.getElementById('victory');
 const intro = document.getElementById('intro');
 
 document.onkeydown = animate;
-document.getElementById("body").addEventListener("load", createFood());
+document.getElementById("body").addEventListener("load", createFood()); playagainBtn;
 
 let squareLeft = 0;
 let squareTop = 0;
@@ -68,6 +68,7 @@ function countDown() {
         document.getElementById("food").style.display = 'none';
         document.getElementById("counter").style.display = 'none';
         document.getElementById("progressbar").style.display = 'none';
+        document.getElementById('counter').innerHTML = 0;
     } else {
         progressWidth++;
         progressBar.style.width = progressWidth + '%';
@@ -128,6 +129,7 @@ function keepCount() {
             document.getElementById("square").style.backgroundColor = '#002125';
             document.getElementById("counter").style.color = '#002125';
             document.getElementById("counter").style.backgroundColor = '#002125';
+            document.getElementById("loss").style.display = 'none';
         }
     }
 }
