@@ -72,6 +72,21 @@ body {
     display: none;
 }
 
+#loss {
+    margin-top: 10%;
+    height: 500px;
+    width: 750px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #04d99d;
+    font-size: 120px;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+    display: none;
+}
+
 #intro {
     margin-top: 5%;
     height: 500px;
@@ -90,5 +105,7 @@ body {
     height: 5px;
     background-color: #f2059f;
     transition-timing-function: ease-in;
-    transition: 0.2s;
+    transition: 0.1s;
+    display: none;
+    z-index: 3;
 }

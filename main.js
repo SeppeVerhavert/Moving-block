@@ -13,6 +13,7 @@ let counter = 0;
 
 let elem = document.getElementById("progressbar");
 let width = 0;
+let time = setInterval(countDown, 50);
 
 function animate(e) {
 
@@ -74,24 +75,31 @@ function deleteFood() {
 
 function detectCollision() {
     if (squareLeft === randomX && squareTop === randomY) {
-        keepTime();
+        countDown();
         deleteFood();
         keepCount();
         createFood();
+        resetTime();
     }
 }
 
-function keepTime() {
-    
-    var id = setInterval(countDown, 50);
-    function countDown() {
-        if (width >= 100) {
-            clearInterval(id);
-        } else {
-            width++;
-            elem.style.width = width + '%';
-        }
+function countDown() {
+    if (width >= 100) {
+        clearInterval(time);
+        document.getElementById("loss").style.display = 'block';
+        document.getElementById("square").style.display = 'none';
+        document.getElementById("food").style.display = 'none';
+        document.getElementById("counter").style.display = 'none';
+    } else {
+        width++;
+        elem.style.width = width + '%';
     }
+}
+
+function resetTime() {
+    clearInterval(time);
+    width = 0;
+    time = setInterval(countDown, 50);
 }
 
 function keepCount() {
@@ -102,6 +110,7 @@ function keepCount() {
     function scaleDificulty() {
         if (counter >= 1) {
             document.getElementById("intro").style.display = 'none';
+            document.getElementById("progressbar").style.display = 'block';
         }
         if (counter > 5) {
             document.getElementById("square").style.backgroundColor = '#F2059F';
