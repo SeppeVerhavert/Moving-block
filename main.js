@@ -137,3 +137,11 @@ function keepCount() {
         }
     }
 }
+
+function resetGame() {
+    console.log('step1');
+    document.getElementById("body").addEventListener("load", createFood());
+    console.log('step2');
+    document.onkeydown = animate;
+    console.log('step3');
+}
