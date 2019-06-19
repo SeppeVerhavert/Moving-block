@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+html {
+    background-image: url(https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
+    align-content: center;
+    background-size: cover;
+}
+
+body {
+    width: 750px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#container {
+    margin-top: 100px;
+    height: 500px;
+    width: 750px;
+    outline: 50px solid #040a12;
+    background-color: #002125;
+    position: relative;
+    filter: drop-shadow(0 0 1rem #04d99d);
+}
+
+#counter {
+    margin-top: 0%;
+    height: 500px;
+    width: 750px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    color: #04d99d;
+    font-size: 400px;
+    font-family: "Press Start 2P", cursive;
+}
+
+#square {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #05aff2;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+}
+
+#food {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f2059f;
+    width: 51px;
+    height: 51px;
+    z-index: 2;
+    filter: drop-shadow(0 0 2px #04d99d0c);
+}
+
+#victory {
+    margin-top: 10%;
+    height: 500px;
+    width: 750px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #04d99d;
+    font-size: 120px;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+    display: none;
+}
+
+#loss {
+    margin-top: 10%;
+    height: 500px;
+    width: 750px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #04d99d;
+    font-size: 100px;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+    display: none;
+}
+
+#loss button {
+    margin-top: -80px;
+    font-size: 20px;
+    color: white;
+    background-color: #f2059f;
+
+}
+
+#intro {
+    margin-top: 5%;
+    height: 500px;
+    width: 750px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #04d99d;
+    font-size: 60px;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+}
+
+#progressbar {
+    height: 5px;
+    background-color: #f2059f;
+    transition-timing-function: ease-in;
+    transition: 0.1s;
+    display: none;
+    z-index: 3;
+}
