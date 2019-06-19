@@ -53,10 +53,10 @@ function animate(e) {
 
 function detectCollision() {
     if (squareLeft === randomX && squareTop === randomY) {
-        countDown();
         deleteFood();
         keepCount();
         createFood();
+        countDown();
         resetTime();
     }
 }
@@ -103,7 +103,6 @@ function keepCount() {
 
     function scaleDificulty() {
         if (counter >= 1) {
-            progressTime = setInterval(countDown, 50);
             document.getElementById("intro").style.display = 'none';
             document.getElementById("progressbar").style.display = 'block';
         }
