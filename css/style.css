@@ -85,3 +85,10 @@ body {
     font-family: "Press Start 2P", cursive;
     text-align: center;
 }
+
+#progressbar {
+    height: 5px;
+    background-color: #f2059f;
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+}

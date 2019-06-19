@@ -48,7 +48,7 @@ function animate(e) {
     detectCollision();
 }
 
-function resetLeft () {
+function resetLeft() {
 
 }
 
@@ -74,6 +74,21 @@ function detectCollision() {
         deleteFood();
         keepCount();
         createFood();
+        keepTime();
+    }
+}
+
+function keepTime() {
+    var elem = document.getElementById("progressbar");
+    var width = 0;
+    var id = setInterval(frame, 50);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width++;
+            elem.style.width = width + '%';
+        }
     }
 }
 
@@ -83,34 +98,27 @@ function keepCount() {
     scaleDificulty();
 
     function scaleDificulty() {
-        if (counter >= 1) 
-        {
+        if (counter >= 1) {
             document.getElementById("intro").style.display = 'none';
         }
-        if (counter > 5) 
-        {
+        if (counter > 5) {
             document.getElementById("square").style.backgroundColor = '#F2059F';
         }
-        if (counter > 10) 
-        {
+        if (counter > 10) {
             document.getElementById("square").style.backgroundColor = '#04D99D';
         }
-        if (counter > 15) 
-        {
+        if (counter > 15) {
             document.getElementById("counter").style.color = '#F2059F';
         }
-        if (counter > 20) 
-        {
+        if (counter > 20) {
             document.getElementById("square").style.backgroundColor = '#002125';
         }
-        if (counter > 25) 
-        {
+        if (counter > 25) {
             document.getElementById("square").style.backgroundColor = '#040A12';
             document.getElementById("counter").style.color = '#040A12';
             document.getElementById("counter").style.backgroundColor = '#040A12';
         }
-        if (counter > 26) 
-        {
+        if (counter > 26) {
             document.getElementById("victory").style.display = 'inline';
             document.getElementById("square").style.backgroundColor = '#002125';
             document.getElementById("counter").style.color = '#002125';
