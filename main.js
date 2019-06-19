@@ -1,11 +1,10 @@
 const square = document.getElementById('square');
 const container = document.getElementById('container');
 const food = document.createElement('div');
-const victory = document.getElementById('victory');
-const intro = document.getElementById('intro');
 
 document.getElementById("body").addEventListener("load", createFood());
 document.onkeydown = animate;
+document.getElementById("resetBtn").addEventListener("click", resetGame);
 
 let squareLeft = 0;
 let squareTop = 0;
@@ -139,9 +138,12 @@ function keepCount() {
 }
 
 function resetGame() {
-    console.log('step1');
     document.getElementById("body").addEventListener("load", createFood());
-    console.log('step2');
+    document.getElementById("loss").style.display = 'none';
+    document.getElementById("square").style.display = 'block';
+    document.getElementById("food").style.display = 'block';
+    document.getElementById("counter").style.display = 'none';
+    document.getElementById("progressbar").style.display = 'none';
     document.onkeydown = animate;
-    console.log('step3');
+    resetTime();
 }
