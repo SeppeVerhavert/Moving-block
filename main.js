@@ -14,6 +14,10 @@ let progressBar = document.getElementById("progressbar");
 let progressWidth = 0;
 let progressTime = 0;
 
+let currentHighscore = counter;
+document.getElementById("currentHighscore").innerHTML = currentHighscore;
+let newHighscore = "";
+
 function animate(e) {
     if (e.keyCode === 39) {
         squareLeft += 50;
@@ -67,6 +71,7 @@ function countDown() {
         document.getElementById("food").style.display = 'none';
         document.getElementById("counter").style.display = 'none';
         document.getElementById("progressbar").style.display = 'none';
+        document.getElementById("resetBtn").style.display = 'block';
         document.getElementById('counter').innerHTML = 0;
     } else if (progressWidth >= 100 && counter === 0) {
         clearInterval(progressTime);
@@ -110,7 +115,10 @@ function keepCount() {
     countHighscore();
 
     function countHighscore() {
-        document.getElementById("currentHighscore").innerHTML = counter;
+
+        if (currentHighscore > newHighscore);
+        newHighscore = currentHighscore;
+        document.getElementById("currentHighscore").innerHTML = newHighscore;
     }
 
     function scaleDificulty() {
@@ -139,6 +147,7 @@ function keepCount() {
         }
         if (counter > 26) {
             document.getElementById("victory").style.display = 'inline';
+            document.getElementById("resetBtn").style.display = 'block';
             document.getElementById("square").style.backgroundColor = '#002125';
             document.getElementById("counter").style.color = '#002125';
             document.getElementById("counter").style.backgroundColor = '#002125';
@@ -150,7 +159,9 @@ function keepCount() {
 function resetGame() {
     document.getElementById("body").addEventListener("load", createFood());
     document.getElementById("intro").style.display = 'block';
+    document.getElementById("victory").style.display = 'none';
     document.getElementById("loss").style.display = 'none';
+    document.getElementById("resetBtn").style.display = 'none';
 
     document.getElementById("square").style.display = 'block';
     document.getElementById("square").style.backgroundColor = '#05aff2';
