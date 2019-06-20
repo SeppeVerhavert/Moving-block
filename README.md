@@ -18,3 +18,7 @@ By pushing the arrow keys the player can move a square around. The goal of the g
 
 Play the game at:
 https://seppeverhavert.github.io/Moving-block/
+
+## Credits
+
+Photo by Carl Raw on Unsplash
