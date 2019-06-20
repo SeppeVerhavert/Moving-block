@@ -21,36 +21,33 @@ let newHighscore = "";
 function animate(e) {
     if (e.keyCode === 39) {
         squareLeft += 50;
-        square.style.left = squareLeft + 'px';
-        if (squareLeft >= 650) {
-            squareLeft = 650;
+        if (squareLeft >= 700) {
+            squareLeft = 700;
         }
     }
 
     if (e.keyCode === 37) {
         squareLeft -= 50;
-        square.style.left = squareLeft + 'px';
-        if (squareLeft < 50) {
-            squareLeft = 50;
+        if (squareLeft < 0) {
+            squareLeft = 0;
         }
     }
 
     if (e.keyCode === 40) {
         squareTop += 50;
-        square.style.top = squareTop + 'px';
-        if (squareTop > 400) {
-            squareTop = 400;
+        if (squareTop > 450) {
+            squareTop = 450;
         }
     }
 
     if (e.keyCode === 38) {
         squareTop -= 50;
-        square.style.top = squareTop + 'px';
-        if (squareTop < 50) {
-            squareTop = 50;
+        if (squareTop < 0) {
+            squareTop = 0;
         }
     }
-
+    square.style.left = squareLeft + 'px';
+    square.style.top = squareTop + 'px';
     detectCollision();
 }
 
