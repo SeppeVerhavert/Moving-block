@@ -14,9 +14,9 @@ let progressBar = document.getElementById("progressbar");
 let progressWidth = 0;
 let progressTime = 0;
 
-// let currentHighscore = counter;
-// document.getElementById("currentHighscore").innerHTML = currentHighscore;
-// let newHighscore = "";
+let currentHighscore = counter;
+document.getElementById("currentHighscore").innerHTML = currentHighscore;
+let newHighscore = "";
 
 function animate(e) {
     if (e.keyCode === 39) {
@@ -109,17 +109,17 @@ function deleteFood() {
 }
 
 function keepCount() {
-    ++counter;
+    counter++;
     document.getElementById('counter').innerHTML = counter;
     scaleDificulty();
-    // countHighscore();
+    countHighscore();
 
-    // function countHighscore() {
+    function countHighscore() {
 
-    //     if (currentHighscore > newHighscore);
-    //     newHighscore = currentHighscore;
-    //     document.getElementById("currentHighscore").innerHTML = newHighscore;
-    // }
+        if (currentHighscore > newHighscore);
+        newHighscore = currentHighscore;
+        document.getElementById("currentHighscore").innerHTML = newHighscore;
+    }
 
     function scaleDificulty() {
         if (counter >= 1) {
