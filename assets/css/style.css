@@ -120,11 +120,11 @@ body{
     z-index: 3;
 }
 
-#highscore {
+/* #highscore {
     position: absolute;
     margin-top: -5%;
     z-index: 3;
     color: #f2059f;
     text-align: center;
     margin-left: 33%;
-}
+} */
