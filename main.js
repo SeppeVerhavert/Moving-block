@@ -23,7 +23,7 @@ function animate(e) {
         squareLeft += 50;
         if (squareLeft >= 700) {
             squareLeft = 700;
-        }
+        }    
     }
 
     if (e.keyCode === 37) {
